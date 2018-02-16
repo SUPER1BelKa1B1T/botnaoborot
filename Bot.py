@@ -5,8 +5,8 @@ import os
 
 
 try:
-    bot = vk_api.VkApi(token='')
-    bot._auth_token()
+    vk = vk_api.VkApi(token='')
+    vk._auth_token()
     values = {'out': 0, 'count': 100, 'time_offset': 60}
 except:
     time.sleep(10)
@@ -78,7 +78,7 @@ def MSG():
                         if not item['user_id'] in peopleID:
                             peopleID.append(int(item['user_id']))
                             fileW = open('pepID.txt', 'a')
-                            fileW.write(int(item['user_id']))
+                            fileW.write(str(item['user_id']))
                             fileW.close()
                             print('-->peopleID: ' + str(peopleID))
     except Exception as err:
