@@ -1,9 +1,6 @@
-﻿import time
-import vk_api
-import threading
-import os
+﻿import vk_api
 
-vk = vk_api.VkApi(token='')
+vk = vk_api.VkApi(token='377b806930a53563ea391ee3227eef0fca4a9b77a5006663b0e5578b55c9e9180c91072503a88dafe364e')
 vk._auth_token()
 values = {'out': 0, 'count': 100, 'time_offset': 60}
 
@@ -27,4 +24,4 @@ def main():
             continue
                     
 if __name__ == '__main__':
-    ain()
+    main()
