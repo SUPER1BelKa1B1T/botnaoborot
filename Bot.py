@@ -1,4 +1,5 @@
-﻿import vk_api
+import vk_api
+import time
 
 vk = vk_api.VkApi(token='377b806930a53563ea391ee3227eef0fca4a9b77a5006663b0e5578b55c9e9180c91072503a88dafe364e')
 vk._auth_token()
@@ -21,6 +22,7 @@ def main():
                     write_msg(item['user_id'],a)
         except:
             continue
+        time.sleep(3)
                     
 if __name__ == '__main__':
     main()
