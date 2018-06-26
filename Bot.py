@@ -13,7 +13,6 @@ def main():
             response = vk.method('messages.get', values)
             if response['items']:
                 values['last_message_id'] = response['items'][0]['id']
-                print('\n-->Message from user:   ' + str(response))
             for item in response['items']:
                 if response['items']:
                     a = response['items'][0]["body"]
